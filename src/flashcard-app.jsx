@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Flashcard from './Flashcard';
-
+import Flashcard from './flashcard.jsx';
 import FlashcardNavigation from './flashcard-navigation.jsx';
 import './flashcard.css'
+import AnswerInput from './answer-input.jsx';
 
 function FlashcardApp({ flashcards }) {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -26,7 +26,7 @@ function FlashcardApp({ flashcards }) {
     <div className="flashcard-app">
       <Flashcard
         problem={flashcards[currentCardIndex].problem}
-        solution={flashcards[currentCardIndex].solution}
+        explanation={flashcards[currentCardIndex].explanation}
         difficulty={flashcards[currentCardIndex].difficulty}
         showAnswer={showAnswer}
         onShowAnswer={handleShowAnswer}
@@ -35,6 +35,11 @@ function FlashcardApp({ flashcards }) {
         onNextCard={handleNextCard}
         onPrevCard={handlePrevCard}
       />
+      <AnswerInput
+        onSubmit={handleNextCard}
+        solution={flashcards[currentCardIndex].solution}
+      />
+
     </div>
   );
 }

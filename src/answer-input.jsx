@@ -23,7 +23,7 @@ function AnswerInput({ onSubmit, solution }) {
       <button type="submit">Submit</button>
       {isCorrect !== null && (
         <div className={`flashcard-answer-message ${isCorrect ? 'flashcard-correct' : 'flashcard-incorrect'}`}>
-          {isCorrect ? 'Correct!' : 'Incorrect!'}
+          {isCorrect ? 'Correct!' : 'Incorrect! The answer is: ' + solution}
         </div>
       )}
     </form>
