@@ -62,13 +62,13 @@ function App() {
     }
   ];
   
-  
+
   return (
     <div className="app">
       <Flashcard
-        problem={cards[currentCardIndex].problem}
-        solution={cards[currentCardIndex].solution}
-        difficulty={cards[currentCardIndex].difficulty}
+        problem={flashcards[currentCardIndex].problem}
+        solution={flashcards[currentCardIndex].solution}
+        difficulty={flashcards[currentCardIndex].difficulty}
         isCorrect={isCorrect}
         onNextCard={handleNextCard}
         onPrevCard={handlePrevCard}
