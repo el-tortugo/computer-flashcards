@@ -1,71 +1,60 @@
 .flashcard {
-  position: relative;
-  width: 1000px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
   min-height: 200px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  overflow: hidden;
-  font-family: Consolas, Monaco, monospace;
-  transition: background-color 0.5s ease;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
 }
 
-.flashcard.easy {
-  background-color: green;
+.flashcard-easy {
+  background-color: #b3ffb3;
 }
 
-.flashcard.medium {
-  background-color: yellow;
+.flashcard-medium {
+  background-color: #ffffb3;
 }
 
-.flashcard.hard {
-  background-color: red;
+.flashcard-hard {
+  background-color: #ffb3b3;
 }
 
-.flashcard:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+.flashcard-content {
+  color: black;
 }
-  
-  .flashcard.show-answer .flashcard-content .flashcard-solution {
-    display: block;
-  }
-  
-  .flashcard-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
-  }
-  
-  .flashcard-content .flashcard-problem {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
-    color:black;
-  }
-  
-  .flashcard-content .flashcard-solution {
-    font-size: 18px;
-    font-weight: normal;
-    display: none;
-    text-align: center;
-    color: black;
-  }
-  
-  .flashcard-content .flashcard-click-to-reveal {
-    font-size: 12px;
-    font-weight: normal;
-    margin-top: 10px;
-    text-align: center;
-  }
+
+.flashcard-content .flashcard-problem {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.flashcard-content .flashcard-solution {
+  font-size: 18px;
+  font-weight: normal;
+  display: none;
+  text-align: center;
+}
+
+.flashcard-content .flashcard-click-to-reveal {
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.flashcard-correct {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.flashcard-incorrect {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 

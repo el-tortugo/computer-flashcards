@@ -1,6 +1,6 @@
-// FlashcardApp.jsx
 import React, { useState } from 'react';
-import Flashcard from './flashcard.jsx';
+import Flashcard from './Flashcard';
+
 import FlashcardNavigation from './flashcard-navigation.jsx';
 import './flashcard.css'
 
